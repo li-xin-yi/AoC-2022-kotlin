@@ -16,12 +16,12 @@ fun main() {
         return res
     }
 
-    fun solve_part1(input: List<String>): Int {
+    fun solvePart1(input: List<String>): Int {
         val lst = parseInput(input)
         return lst.max()
     }
 
-    fun solve_part2(input: List<String>): Int {
+    fun solvePart2(input: List<String>): Int {
         val lst = parseInput(input).map { it -> -it }
         val pq = PriorityQueue<Int>(lst)
         var res = 0
@@ -35,6 +35,6 @@ fun main() {
     // test if implementation meets criteria from the description, like:
     val testInput = readInput("input/Day01_test")
 
-    println(solve_part1(testInput))
-    println(solve_part2(testInput))
+    println(solvePart1(testInput))
+    println(solvePart2(testInput))
 }
